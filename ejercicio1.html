@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Practicando con Javascript</title>
+</head>
+
+<body>
+    <h1>Ejercicio con Javascript</h1>
+    <script>
+        var distancia;
+        var transporte;
+        distancia = prompt('ingrese una distancia expresada en metros:', '');
+        switch (true) {
+            case (distancia >= 0) && (distancia <= 1000):
+                transporte = 'Pie';
+                break;
+            case (distancia > 1000) && (distancia <= 10000):
+                transporte = 'Bicicleta';
+                break;
+            case (distancia > 10000) && (distancia <= 30000):
+                transporte = 'Colectivo';
+                break;
+            case (distancia > 30000) && (distancia <= 100000):
+                transporte = 'Auto';
+                break;
+            case (distancia > 100000):
+                transporte = 'Avion';
+                break;
+
+
+            default:
+                break;
+        }
+
+
+    </script>
+    <p>El transporte correcto para la distancia en metros ingresada es <strong>
+            <script>document.write(transporte)</script>
+        </strong></p>
+    <footer>
+        Tarea 3 del Módulo 3 - Comenzando con Javascript
+
+    </footer>
+</body>
+
+</html>

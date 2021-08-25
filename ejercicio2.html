@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Practicando con Javascript</title>
+</head>
+
+<body>
+    <h1>Ejercicio con Javascript</h1>
+    <script>
+        var array = [10, 5, 8, 1, 9];
+
+        document.write('Este es el arreglo de forma desordenadada ' + array);
+       /* Este es el codigo para ordenar el arreglo de menor a mayor */
+        for (let x = 0; x < array.length; x++) {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] > array[i + 1]) {
+                    var temp = array[i + 1];
+                    array[i + 1] = array[i];
+                    array[i] = temp;
+
+                };
+
+            }
+
+        }
+        /* Este es el codigo para obtener el mayor número del arreglo*/
+        var mayor = array[0];
+        for (let index = 1; index < array.length; index++) {
+            if (array[index] > mayor) {
+                mayor = array[index];
+            }
+        }
+
+
+
+    </script>
+    <p>Este es el arreglo ordenado de menor a mayor
+        <script>document.write(array)</script>
+    </p>
+
+    <p>Este es mayor número del arreglo
+        <script>document.write(mayor)</script>
+    </p>
+    <footer>
+        Tarea 3 del Módulo 3 - Comenzando con Javascript
+
+    </footer>
+</body>
+
+</html>
